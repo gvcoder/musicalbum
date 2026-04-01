@@ -1,0 +1,29 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Album {
+  id        String   @id @default(cuid())
+  title     String
+  artist    String
+  genre     String?
+  coverUrl  String?
+  tracks    Track[]
+  createdAt DateTime @default(now())
+}
+
+model Track {
+  id         String   @id @default(cuid())
+  albumId    String
+  album      Album    @relation(fields: [albumId], references: [id], onDelete: Cascade)
+  title      String
+  fileUrl    String
+  duration   Int      @default(0)
+  trackOrder Int      @default(0)
+  createdAt  DateTime @default(now())
+}

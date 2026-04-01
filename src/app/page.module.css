@@ -1,0 +1,91 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 4rem 0 3rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.createButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--primary-accent);
+  color: white;
+  padding: 0.8rem 1.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.2s var(--transition-smooth);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+}
+
+.createButton:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.5);
+  opacity: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding-bottom: 5rem;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0;
+  text-align: center;
+  background: var(--surface-color);
+  border-radius: 32px;
+  border: 1px dashed var(--border-color);
+}
+
+.emptyIcon {
+  width: 80px;
+  height: 80px;
+  background: var(--surface-hover);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.emptyState h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.emptyState p {
+  color: var(--text-muted);
+  max-width: 400px;
+  margin-bottom: 2.5rem;
+}
+
+.emptyButton {
+  background: transparent;
+  border: 1px solid var(--primary-accent);
+  color: var(--primary-accent);
+  padding: 0.75rem 2.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.emptyButton:hover {
+  background: var(--primary-accent);
+  color: white;
+  opacity: 1;
+}

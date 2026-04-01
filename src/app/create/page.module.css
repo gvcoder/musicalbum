@@ -1,0 +1,127 @@
+.header {
+  padding: 4rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--text-main);
+  opacity: 1;
+}
+
+.formWrapper {
+  padding: 3rem;
+  border-radius: 32px;
+  max-width: 800px;
+  margin-bottom: 5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.inputGroup label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.inputGroup input {
+  background: var(--surface-hover);
+  border: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  color: var(--text-main);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.inputGroup input:focus {
+  border-color: var(--primary-accent);
+  background: rgba(59, 130, 246, 0.05);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+.fileInputWrapper {
+  position: relative;
+  background: var(--surface-hover);
+  border: 2px dashed var(--border-color);
+  padding: 3rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.fileInputWrapper:hover {
+  border-color: var(--primary-accent);
+  background: rgba(59, 130, 246, 0.03);
+}
+
+.fileInputWrapper input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.uploadIcon {
+  color: var(--primary-accent);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.submitButton {
+  background: var(--primary-accent);
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
+}
+
+.submitButton:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.6);
+}
+
+.cancelButton {
+  color: var(--text-muted);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.cancelButton:hover {
+  color: var(--text-main);
+  opacity: 1;
+}
