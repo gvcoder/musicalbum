@@ -22,6 +22,7 @@ export async function uploadTrack(formData: FormData) {
   // Write track to filesystem
   const arrayBuffer = await file.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
+  await fs.mkdir(path.dirname(filePath), { recursive: true });
   await fs.writeFile(filePath, buffer);
 
   // Auto-increment track order

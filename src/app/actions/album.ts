@@ -21,6 +21,7 @@ export async function createAlbum(formData: FormData) {
     const arrayBuffer = await cover.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
     
+    await fs.mkdir(path.dirname(filePath), { recursive: true });
     await fs.writeFile(filePath, buffer);
     coverUrl = `/uploads/covers/${fileName}`;
   }
